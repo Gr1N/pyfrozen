@@ -12,7 +12,7 @@ with open(path.join(here, 'README.md'), encoding='utf-8') as f:
 
 setup(
     name='pyfrozen',
-    version='0.1.0',
+    version='0.1.1.dev0',
     description='Set of collections with ability to freeze their items',
     long_description=long_description,
     long_description_content_type='text/markdown',

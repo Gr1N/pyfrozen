@@ -1,18 +1,13 @@
 from collections import MutableSequence
 from functools import total_ordering
-from typing import (
-    Any,
-    Optional,
-)
+from typing import Any, Optional
 
-__all__ = (
-    'FrozenList',
-)
+__all__ = ("FrozenList",)
 
 
 @total_ordering
 class FrozenList(MutableSequence):
-    __slots__ = '_frozen', '_items'
+    __slots__ = "_frozen", "_items"
 
     def __init__(self, *, items: Optional[list] = None) -> None:
         self._frozen = False
@@ -45,7 +40,7 @@ class FrozenList(MutableSequence):
         return list(self) <= other
 
     def __repr__(self):
-        return f'<FrozenList(frozen={self._frozen}, {self._items!r})>'
+        return f"<FrozenList(frozen={self._frozen}, {self._items!r})>"
 
     @property
     def frozen(self) -> bool:
@@ -53,7 +48,7 @@ class FrozenList(MutableSequence):
 
     def assert_frozen(self) -> None:
         if self._frozen:
-            raise RuntimeError('Cannot modify frozen list')
+            raise RuntimeError("Cannot modify frozen list")
 
     def freeze(self) -> None:
         self._frozen = True

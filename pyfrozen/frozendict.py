@@ -1,16 +1,11 @@
-from collections import (
-    Mapping,
-    MutableMapping,
-)
+from collections import Mapping, MutableMapping
 from typing import Optional
 
-__all__ = (
-    'FrozenDict',
-)
+__all__ = ("FrozenDict",)
 
 
 class FrozenDict(MutableMapping):
-    __slots__ = '_frozen', '_items'
+    __slots__ = "_frozen", "_items"
 
     def __init__(self, *, items: Optional[dict] = None) -> None:
         self._frozen = False
@@ -34,7 +29,7 @@ class FrozenDict(MutableMapping):
         return iter(self._items)
 
     def __repr__(self):
-        return f'<FrozenDict(frozen={self._frozen}, {self._items!r})>'
+        return f"<FrozenDict(frozen={self._frozen}, {self._items!r})>"
 
     @property
     def frozen(self) -> bool:
@@ -42,7 +37,7 @@ class FrozenDict(MutableMapping):
 
     def assert_frozen(self) -> None:
         if self._frozen:
-            raise RuntimeError('Cannot modify frozen dict')
+            raise RuntimeError("Cannot modify frozen dict")
 
     def freeze(self) -> None:
         self._frozen = True
@@ -51,11 +46,12 @@ class FrozenDict(MutableMapping):
         self.assert_frozen()
 
         if not args:
-            raise TypeError('Descriptor `update` of `FrozenDict` object '
-                            'needs an argument')
+            raise TypeError(
+                "Descriptor `update` of `FrozenDict` object needs an argument"
+            )
 
         if len(args) > 1:
-            raise TypeError(f'Update expected at most 1 arguments, got {len(args)}')
+            raise TypeError(f"Update expected at most 1 arguments, got {len(args)}")
 
         arg = args[0]
         if isinstance(arg, Mapping):

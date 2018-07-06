@@ -1,4 +1,4 @@
-# pyfrozen [![Build Status](https://travis-ci.org/Gr1N/pyfrozen.svg?branch=master)](https://travis-ci.org/Gr1N/pyfrozen) [![codecov](https://codecov.io/gh/Gr1N/pyfrozen/branch/master/graph/badge.svg)](https://codecov.io/gh/Gr1N/pyfrozen)
+# pyfrozen [![Build Status](https://travis-ci.org/Gr1N/pyfrozen.svg?branch=master)](https://travis-ci.org/Gr1N/pyfrozen) [![codecov](https://codecov.io/gh/Gr1N/pyfrozen/branch/master/graph/badge.svg)](https://codecov.io/gh/Gr1N/pyfrozen) [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black)
 
 Set of collections with ability to freeze their items.
 

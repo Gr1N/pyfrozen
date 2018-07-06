@@ -19,7 +19,7 @@ exclude = '''
 
 [tool.poetry]
 name = "pyfrozen"
-version = "0.2.0"
+version = "0.3.0-alpha.0"
 description = "Set of collections with ability to freeze their items"
 authors = [
     "Nikita Grishko <gr1n@protonmail.com>"

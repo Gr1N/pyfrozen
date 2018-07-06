@@ -1,6 +1,0 @@
-include MANIFEST.in
-include *.md
-graft pyfrozen
-prune tests
-global-exclude __pycache__
-global-exclude *.py[co]

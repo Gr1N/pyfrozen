@@ -47,15 +47,20 @@ Set of collections with ability to freeze their items.
     <FrozenList(frozen=True, ['value_1', 'value_2'])>
     >>>
 
-## Testing and linting
+## Contributing
 
-For testing and linting install [tox](http://tox.readthedocs.io):
+To work on the `pyfrozen` codebase, you'll want to clone the project locally and install the required dependencies via [poetry](https://poetry.eustace.io):
 
-    $ pip install tox
+    $ git clone git@github.com:Gr1N/pyfrozen.git
+    $ poetry install
 
-...and run:
+To run tests and linters use command below:
 
-    $ tox
+    $ poetry run tox
+
+If you want to run only tests or linters you can explicitly specify which test environment you want to run, e.g.:
+
+    $ poetry run tox -e py36-tests
 
 ## TODO
 

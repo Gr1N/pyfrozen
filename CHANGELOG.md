@@ -1,6 +1,6 @@
 # Changelog for pyfrozen
 
-## 0.2.0 (unreleased)
+## 0.2.0 (2018-07-06)
 
 - Python 3.7 support
 
